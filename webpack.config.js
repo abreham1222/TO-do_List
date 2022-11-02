@@ -17,9 +17,9 @@ module.exports = {
       title: 'Todo-List',
       template: './src/index.html',
       hash: true,
-    })
+    }),
   ],
-   module: {
+  module: {
     rules: [
       {
         test: /\.html$/i,
@@ -35,4 +35,4 @@ module.exports = {
       },
     ],
   },
-}
+};
