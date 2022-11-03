@@ -5,6 +5,10 @@ module.exports = {
   mode: 'development',
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
+    add: './src/add.js',
+    remove: './src/remove.js',
+    addTask: './src/addTaskUI.js',
+    tasks: './src/tasks.js',
   },
   output: {
     filename: '[name].bundle.js',
