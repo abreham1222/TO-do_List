@@ -35,3 +35,31 @@ const appendTask = (item, list) => {
           });
         }
       });
+       } else {
+      clearTask(item.index, list);
+    }
+  });
+  toDoListUI.appendChild(taskUI);
+  const check = taskUI.children[0].children[0];
+
+  if (item.completed === true) {
+    check.checked = true;
+    taskUI.children[0].style.textDecoration = 'line-through';
+  }
+
+  check.style.cursor = 'pointer';
+  moveImg.style.cursor = 'pointer';
+  check.addEventListener('click', () => {
+    if (check.checked === true) {
+      taskUI.children[0].style.textDecoration = 'line-through';
+      item.completed = true;
+      localStorage.setItem('tasks', JSON.stringify(list));
+    } else {
+      taskUI.children[0].style.textDecoration = 'none';
+      item.completed = false;
+      localStorage.setItem('tasks', JSON.stringify(list));
+    }
+  });
+};
+
+export default appendTask;
