@@ -39,5 +39,5 @@ deleteUI.addEventListener('click', () => {
       clearTask(checks[i].value, list);
     }
   }
-  localStorage.setItem('tasks', JSON.stringify(list));
+  localStorage.removeItem('tasks', JSON.stringify(list));
 });
