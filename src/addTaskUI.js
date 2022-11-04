@@ -11,7 +11,7 @@ const appendTask = (item, list) => {
   const moveImg = new Image();
   moveImg.src = moveSrc;
   taskUI.appendChild(moveImg);
-   moveImg.addEventListener('click', () => {
+  moveImg.addEventListener('click', () => {
     if (moveImg.src === moveSrc) {
       moveImg.src = trashSrc;
       moveImg.parentNode.style.background = 'rgba(214, 214, 148, 0.534)';
@@ -35,7 +35,7 @@ const appendTask = (item, list) => {
           });
         }
       });
-       } else {
+    } else {
       clearTask(item.index, list);
     }
   });
