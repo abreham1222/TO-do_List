@@ -5,7 +5,6 @@ const clearTask = (index, list) => {
 
   document.querySelector(`#task-${index}`).parentNode.parentNode.remove();
   localStorage.setItem('tasks', JSON.stringify(list));
-  if (list.length === 0) return;
 };
 
 export default clearTask;
